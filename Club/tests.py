@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from .forms import MeetingForm, EventForm, ResourceForm
 
+#models tests
 class MinutesTest(TestCase):
     def test_string(self):
         minutes=Minutes(Meeting.mtgId=='1') #minutes_id
@@ -90,6 +91,7 @@ class New_Resource_authentication_test(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'Club/newresource.html')
 
+# Form Tests
 class New_Meeting_Form_Test(TestCase):
     #def setUp(self):
      #   self.test_user=User.objects.create_user(username='testuser1')
