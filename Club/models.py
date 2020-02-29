@@ -23,6 +23,7 @@ class Minutes(models.Model):
     minutestext=models.TextField()
 
     def __str__(self):
+        # return self.minutestext
         return str(Meeting.mtgId) #minutes_id
     
     class Meta:

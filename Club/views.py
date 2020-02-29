@@ -24,14 +24,17 @@ def getmeetings(request):
 
 def meetingdetails(request, id):
     meet=get_object_or_404(Meeting, pk=id) 
-    #mmin=Minutes.objects.filter(Meeting, pk=id)
+    mmin=get_object_or_404(Meeting, pk=id) # Minutes.object.get(Meeting, pk=id)
+    minutes=Minutes.objects.get(Meeting, pk=id)
     context={
         'meet' : meet,
-        #'mmin' : mmin,
+        'mmin' : mmin,
+        'minutes' : minutes,
     }
     return render(request, 'Club/meetingdetails.html', context=context)
 
 def meetingminutes(request, id):
+    # minutes_list=Minutes.objects.all()
     mmin=get_object_or_404(Meeting, pk=id)
     context={
         'mmin' : mmin,
