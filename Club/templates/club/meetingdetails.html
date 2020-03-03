@@ -5,16 +5,15 @@
 <p>Time of Meeting: {{ meet.mtgtime }}</p>
 <p>Location: {{ meet.mtglocation }}</p>
 <p>Agenda: {{ meet.agenda }}</p>
-<p>Attendance: {{ mmin.attendance }} </p>
-<!--<p>Attendance:
+
+<p>Attendance:</p>
     <ul>
     {% for user in mmin.attendance.all %}
             <li>{{ user }}</li>
     {% endfor %}
     </ul>
-</p> -->
-<p>Minutes: {{ mmin.minutestext }} </p> 
 
+<p>Minutes: {{ mmin.minutestext }} </p>
 
 {% endblock %}
 
